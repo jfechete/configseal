@@ -1,0 +1,18 @@
+[project]
+name = "configseal"
+version = "0.1.0"
+description = "Encrypted INI file storage for configparser"
+requires-python = ">=3.8"
+dependencies = [
+    "cryptography>=42.0.0",
+]
+
+[project.scripts]
+configseal-edit = "configseal.cli_edit:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
