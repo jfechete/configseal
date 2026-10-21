@@ -1,5 +1,6 @@
 import configparser
 import os
+from functools import cache
 from pathlib import Path
 
 from .core import decrypt, ensure_extension
@@ -7,6 +8,7 @@ from .core import decrypt, ensure_extension
 __all__ = ["read_file", "read_config"]
 
 
+@cache
 def read_config(
     filename: str, key: str | None=None, creds: str="configseal-key"
 ) -> configparser.ConfigParser:
@@ -23,6 +25,7 @@ def read_config(
     return config
 
 
+@cache
 def read_file(
     filename: str, key: str | None=None, creds: str="configseal-key"
 ) -> str:
