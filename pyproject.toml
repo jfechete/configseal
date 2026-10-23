@@ -2,10 +2,13 @@
 name = "configseal"
 version = "0.1.0"
 description = "Encrypted INI file storage for configparser"
+readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
     "cryptography>=42.0.0",
 ]
+license = "MIT"
+license-files = ["LICENSE"]
 
 [project.scripts]
 configseal-edit = "configseal.cli_edit:main"
